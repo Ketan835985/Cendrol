@@ -1,19 +1,20 @@
 
 ## tech Stack 
-Node.JS
-Express.JS
-MONGODB
-AWS
+---------------------------------
+* Node.JS
+*  Express.JS
+* MONGODB
+* AWS
 
 
 token : Authorization Bearer token
 
 ## End point of All requests
-createUser --- (/user) --- Post Api
-LoginUser --- (/Login) --- Post Api
-getUsers --- (/user) --- GET API // Restricted
-updateUsers --- (/user) --- PUT API   // Restricted
-deleteUsers --- (/user) --- Delete API  // Restricted
+* createUser --- (/user) --- Post Api
+* LoginUser --- (/Login) --- Post Api
+* getUsers --- (/user) --- GET API // Restricted
+* updateUsers --- (/user) --- PUT API   // Restricted
+* deleteUsers --- (/user) --- Delete API  // Restricted
 
 ## Restricted  Api 
 getAllUsers
@@ -23,7 +24,7 @@ deleteUser
 ## Login Credentials
 Use Email and Password
 
-
+-------------------------------------------------------------------------------------------------
 create user using from data in body 
 like this
 
