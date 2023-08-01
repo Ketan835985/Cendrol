@@ -9,11 +9,11 @@ const { auth } = require('../Middleware/auth');
 
 const router = require('express').Router();
 
-router.post('/createUser', userCreate)
+router.post('/user', userCreate)
 router.post('/Login', UserLogin)
-router.get('/allUsers',auth,getUsers)
-router.put('/updateUser/:userId', auth, updateUser)
-router.delete('/deleteUser/:userId', auth, deleteUser);
+router.get('/user',auth,getUsers)
+router.put('/user/:userId', auth, updateUser)
+router.delete('/user/:userId', auth, deleteUser);
 
 
 module.exports = router

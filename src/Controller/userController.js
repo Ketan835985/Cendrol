@@ -68,7 +68,7 @@ const UserLogin = async (req, res) => {
         message: " Please enter your email address and password",
       });
     }
-    const user = await userModel.findOne({ email: email, password: Password });
+    const user = await userModel.findOne({ Email: Email, Password: Password });
     if (!user) {
       return res.status(404).json({ status: false, message: "User not found" });
     }
@@ -88,7 +88,7 @@ const UserLogin = async (req, res) => {
 
 const getUsers = async (req, res) => {
   try {
-    const users = await userModel.find()
+    const users = await userModel.find({isDeleted: false});
     res.status(200).json({status : true, message: "All Users", users: users});
   } catch (error) {
     res.status(500).send({ status: false, message: error.message });
@@ -100,6 +100,7 @@ const getUsers = async (req, res) => {
 
 const updateUser = async (req, res) => {
   try {
+    const files = req.files
     const userId = req.userId
     const paramId = req.params.userId
     const updateData = req.body
